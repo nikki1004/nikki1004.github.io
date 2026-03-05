@@ -31,6 +31,7 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+
     body {
       background: var(--paper);
       color: var(--ink);
@@ -612,6 +613,24 @@
     .project-link-btn:hover {
       background: var(--cyan);
       color: var(--white);
+    }
+
+    .project-link-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+    }
+
+    .project-link-btn.secondary {
+      border-color: rgba(61, 96, 128, 0.22);
+      color: var(--slate-mid);
+    }
+
+    .project-link-btn.secondary:hover {
+      background: var(--ink);
+      color: var(--white);
+      border-color: var(--ink);
     }
 
     .system-visual {
@@ -1230,6 +1249,7 @@
 
       .metrics-grid { grid-template-columns: 1fr 1fr; }
       .pathway-row { grid-template-columns: 1fr; }
+
       .pathway-family {
         border-right: none;
         border-bottom: 1px solid rgba(61, 96, 128, 0.12);
@@ -1251,10 +1271,12 @@
       .hero-stats { flex-direction: column; gap: 1.5rem; }
       .metrics-grid,
       .tools-grid { grid-template-columns: 1fr; }
+
       .snapshot-meta {
         flex-direction: column;
         align-items: flex-start;
       }
+
       .project-content { padding: 2rem 1.4rem; }
       .system-visual,
       .contact-form-wrap,
@@ -1438,337 +1460,376 @@
     </div>
   </section>
 
- <section id="work" class="section-wrap">
-  <div class="container">
-    <div class="section-kicker reveal">Selected work</div>
-    <h2 class="section-title reveal">Projects That Represent<br>the Full Range</h2>
-    <p class="section-intro reveal">
-      Most recent Amazon work is confidential by policy, so the strongest portfolio move here is a clean, readable summary of the systems I built—supported by preview artifacts and optional walkthroughs.
-    </p>
+  <section id="work" class="section-wrap">
+    <div class="container">
+      <div class="section-kicker reveal">Selected work</div>
+      <h2 class="section-title reveal">Projects That Represent<br>the Full Range</h2>
+      <p class="section-intro reveal">
+        Most recent Amazon work is confidential by policy, so the strongest portfolio move here is a clean, readable summary of the systems I built—supported by preview artifacts and public-facing samples where appropriate.
+      </p>
 
-    <div class="projects-layout">
+      <div class="projects-layout">
 
-      <!-- FEATURED: SECURITY PROGRAM -->
-      <div class="project-featured reveal">
-        <div class="project-content">
-          <p class="project-kicker">Global Security Enablement · Amazon</p>
-          <h3 class="project-title">Annual Security Policy Program — 86K+ Learners, 14 Languages</h3>
-          <p class="project-body">
-            I helped evolve a large-scale compliance requirement into a more structured enablement system with stronger governance, more consistent learner experience, and better visibility into risk patterns.
-          </p>
-          <p class="project-body">
-            My role sat at the intersection of strategy, design, and operations: localization at scale, Cornerstone to Amazon Learn transition support, Whole Foods adaptation, and targeted awareness campaigns based on audit and repeat-violation patterns.
-          </p>
-
-          <div class="project-results">
-            <div class="results-label">What improved</div>
-            <ul class="results-list">
-              <li>Global program delivery across 86K+ learners and 14 languages</li>
-              <li>Governance and LMS support during a major platform transition</li>
-              <li>Targeted messaging tied to real audit findings and risk trends</li>
-              <li>Retail adaptation for Whole Foods audiences</li>
-            </ul>
-          </div>
-
-          <div class="project-skills">
-            <span class="skill-chip">Security Awareness</span>
-            <span class="skill-chip">Localization</span>
-            <span class="skill-chip">LMS Migration</span>
-            <span class="skill-chip">Risk Communication</span>
-            <span class="skill-chip">Program Governance</span>
-          </div>
-
-          <div class="project-link-row">
-            <a href="#contact" class="project-link-btn">Request Walkthrough →</a>
-          </div>
-        </div>
-
-        <div class="system-visual">
-          <div class="system-visual-inner">
-            <div class="metrics-grid">
-              <div class="metric-box">
-                <strong>86K+</strong>
-                <span>Learners supported across corporate and retail audiences.</span>
-              </div>
-              <div class="metric-box">
-                <strong>14</strong>
-                <span>Languages localized for broader global consistency.</span>
-              </div>
-              <div class="metric-box">
-                <strong>LMS</strong>
-                <span>Cornerstone → Amazon Learn transition support.</span>
-              </div>
-              <div class="metric-box">
-                <strong>Risk</strong>
-                <span>Audit + repeat-violation trends translated into targeted campaigns.</span>
-              </div>
-            </div>
-
-            <div class="artifact-preview">
-              <div class="artifact-preview-label">Artifact preview (click to enlarge)</div>
-              <div class="artifact-preview-frame" onclick="openLightbox('security.png', 'Security enablement infographic preview')">
-                <img src="security.png" alt="Security enablement infographic preview">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FEATURED: PATHWAYS -->
-      <div class="project-featured reveal">
-        <div class="project-content">
-          <p class="project-kicker">Security Career Pathways · Amazon SETA</p>
-          <h3 class="project-title">5 Role-Based Pathways — From SOC Analyst to Senior TPM</h3>
-          <p class="project-body">
-            People wanted to move into technical security roles, but there wasn’t a structured path showing what to learn, how to progress, and what readiness looked like.
-          </p>
-          <p class="project-body">
-            I designed the pathway architecture, mapped competencies to NIST/NICE/SANS, and built the journey around real movement—coursework, shadowing, mentoring, scenario-based capstones, and operational support materials.
-          </p>
-
-          <div class="project-results">
-            <div class="results-label">What it produced</div>
-            <ul class="results-list">
-              <li>Five pathways spanning Threat, IAM, Technical Programs, Team Management, and Intelligence</li>
-              <li>266 pathway enrollments</li>
-              <li>24% learning gain and 29% proficiency lift across targeted skills</li>
-              <li>Capstones used to validate readiness for role transitions</li>
-            </ul>
-          </div>
-
-          <div class="project-skills">
-            <span class="skill-chip">Competency Mapping</span>
-            <span class="skill-chip">NIST/NICE Alignment</span>
-            <span class="skill-chip">Capstone Design</span>
-            <span class="skill-chip">SME Collaboration</span>
-            <span class="skill-chip">Program Identity</span>
-          </div>
-
-          <div class="project-link-row">
-            <a href="#contact" class="project-link-btn">Request Walkthrough →</a>
-          </div>
-        </div>
-
-        <div class="system-visual">
-          <div class="system-visual-inner">
-            <div class="pathway-board">
-              <div class="pathway-row">
-                <div class="pathway-family">
-                  <strong>Threat</strong>
-                  <span>Growth for threat ops and analysis roles.</span>
-                </div>
-                <div class="pathway-track">
-                  <div class="pathway-step">SOC Analyst<em>Omega · L4</em></div>
-                  <div class="pathway-step">Security Engineer<em>Delta · L5</em></div>
-                  <div class="pathway-step">Senior SE<em>Alpha · L6</em></div>
-                </div>
-              </div>
-
-              <div class="pathway-row">
-                <div class="pathway-family">
-                  <strong>IAM</strong>
-                  <span>Access and identity progression.</span>
-                </div>
-                <div class="pathway-track">
-                  <div class="pathway-step">Access Control Specialist<em>Omega · L4</em></div>
-                  <div class="pathway-step">IAM Manager<em>Delta · L5</em></div>
-                  <div class="pathway-step">Senior IAM Manager<em>Alpha · L6</em></div>
-                </div>
-              </div>
-
-              <div class="pathway-row">
-                <div class="pathway-family">
-                  <strong>Technical Programs</strong>
-                  <span>Technical PM and software-focused tracks.</span>
-                </div>
-                <div class="pathway-track">
-                  <div class="pathway-step">Security Team Manager<em>Omega · L4</em></div>
-                  <div class="pathway-step">Technical Program Manager<em>Delta · L5</em></div>
-                  <div class="pathway-step">Senior TPM<em>Alpha · L6</em></div>
-                </div>
-              </div>
-
-              <div class="pathway-row">
-                <div class="pathway-family">
-                  <strong>Leadership & Intelligence</strong>
-                  <span>Management + intelligence progression.</span>
-                </div>
-                <div class="pathway-track">
-                  <div class="pathway-step">Security Team Manager<em>L4–L6</em></div>
-                  <div class="pathway-step">Business Intelligence Engineer<em>L4–L6</em></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="artifact-preview">
-              <div class="artifact-preview-label">Original visual reference (click to enlarge)</div>
-              <div class="artifact-preview-frame" onclick="openLightbox('pathways.png', 'Career pathways architecture map preview')">
-                <img src="pathways.png" alt="Career pathways architecture map preview">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2-UP GRID -->
-      <div class="projects-grid-2 reveal">
-
-        <!-- Advantage Experience -->
-        <div class="project-card">
-          <div class="project-visual">
-            <div class="project-visual-glyph">⭐</div>
-            <span class="project-visual-tag">Amazon · ~8K Employees</span>
-            <div class="project-meta-badge">
-              <span class="badge badge-cyan">Executive PD</span>
-              <span class="badge">Program Lead</span>
-            </div>
-          </div>
-
+        <div class="project-featured reveal">
           <div class="project-content">
-            <p class="project-kicker">Advantage Experience · Amazon</p>
-            <h3 class="project-title">Executive Professional Development — Built From Zero</h3>
+            <p class="project-kicker">Global Security Enablement · Amazon</p>
+            <h3 class="project-title">Annual Security Policy Program — 86K+ Learners, 14 Languages</h3>
             <p class="project-body">
-              Advantage Experience was an internal professional development initiative for ~8,000 senior employees, created to address gaps in performance management, inclusive leadership, and AI fluency.
+              I helped evolve a large-scale compliance requirement into a more structured enablement system with stronger governance, more consistent learner experience, and better visibility into risk patterns.
             </p>
             <p class="project-body">
-              I helped turn that need into a reusable system: a branded program, coded wiki hub, reusable assets, feedback loops, and alignment to Leadership Principles and annual performance conversations.
+              My role sat at the intersection of strategy, design, and operations: localization at scale, Cornerstone to Amazon Learn transition support, Whole Foods adaptation, and targeted awareness campaigns based on audit and repeat-violation patterns.
             </p>
 
             <div class="project-results">
-              <div class="results-label">What it produced</div>
+              <div class="results-label">What improved</div>
               <ul class="results-list">
-                <li>120+ reusable content assets across 15+ topics</li>
-                <li>Coded wiki hub that made materials easier to find and reuse</li>
-                <li>Templates and governance that reduced content build time</li>
-                <li>Outcomes tied to Leadership Principles and performance conversations</li>
+                <li>Global program delivery across 86K+ learners and 14 languages</li>
+                <li>Governance and LMS support during a major platform transition</li>
+                <li>Targeted messaging tied to real audit findings and risk trends</li>
+                <li>Retail adaptation for Whole Foods audiences</li>
               </ul>
+            </div>
+
+            <div class="project-skills">
+              <span class="skill-chip">Security Awareness</span>
+              <span class="skill-chip">Localization</span>
+              <span class="skill-chip">LMS Migration</span>
+              <span class="skill-chip">Risk Communication</span>
+              <span class="skill-chip">Program Governance</span>
             </div>
 
             <div class="project-link-row">
               <a href="#contact" class="project-link-btn">Request Walkthrough →</a>
             </div>
           </div>
-        </div>
 
-        <!-- VISA Assessor Enablement -->
-        <div class="project-card">
-          <div class="project-visual">
-            <div class="project-visual-glyph">🔍</div>
-            <span class="project-visual-tag">Amazon · ~500 Assessors</span>
-            <div class="project-meta-badge">
-              <span class="badge badge-cyan">3rd Party Enablement</span>
-              <span class="badge">From Zero</span>
+          <div class="system-visual">
+            <div class="system-visual-inner">
+              <div class="metrics-grid">
+                <div class="metric-box">
+                  <strong>86K+</strong>
+                  <span>Learners supported across corporate and retail audiences.</span>
+                </div>
+                <div class="metric-box">
+                  <strong>14</strong>
+                  <span>Languages localized for broader global consistency.</span>
+                </div>
+                <div class="metric-box">
+                  <strong>LMS</strong>
+                  <span>Cornerstone → Amazon Learn transition support.</span>
+                </div>
+                <div class="metric-box">
+                  <strong>Risk</strong>
+                  <span>Audit and repeat-violation trends translated into targeted campaigns.</span>
+                </div>
+              </div>
+
+              <div class="artifact-preview">
+                <div class="artifact-preview-label">Artifact preview (click to enlarge)</div>
+                <div class="artifact-preview-frame" onclick="openLightbox('security.png', 'Security enablement infographic preview')">
+                  <img src="security.png" alt="Security enablement infographic preview">
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
+        <div class="project-featured reveal">
           <div class="project-content">
-            <p class="project-kicker">VISA Assessor Enablement · Amazon</p>
-            <h3 class="project-title">Third-Party Assessor Enablement Built From Scratch</h3>
+            <p class="project-kicker">Security Career Pathways · Amazon SETA</p>
+            <h3 class="project-title">5 Role-Based Pathways — From SOC Analyst to Senior TPM</h3>
             <p class="project-body">
-              Built a new enablement program to prepare third-party assessors across partner sites for consistent audit execution, shared terminology, and standardized findings communication.
+              People wanted to move into more technical security roles, but there was no structured path that showed what to learn, how to progress, and what readiness actually looked like.
             </p>
             <p class="project-body">
-              The end result was a more unified enablement engine that moved teams from subjective opinions to standardized findings.
+              I designed the pathway architecture, mapped competencies to NIST, NICE, and SANS, and built the learning journey around real movement—coursework, shadowing, mentoring, scenario-based capstones, and operational support materials.
             </p>
 
             <div class="project-results">
               <div class="results-label">What it produced</div>
               <ul class="results-list">
-                <li>~500 assessors enabled across partner locations</li>
-                <li>Standardized language and process expectations</li>
-                <li>One full day cut from the audit cycle through cleaner handoffs</li>
+                <li>Five pathways spanning Threat, IAM, Technical Programs, Team Management, and Intelligence</li>
+                <li>266 pathway enrollments</li>
+                <li>24% learning gain and 29% proficiency lift across targeted skills</li>
+                <li>Capstones used to validate readiness for role transitions</li>
               </ul>
             </div>
 
+            <div class="project-skills">
+              <span class="skill-chip">Competency Mapping</span>
+              <span class="skill-chip">NIST/NICE Alignment</span>
+              <span class="skill-chip">Capstone Design</span>
+              <span class="skill-chip">SME Collaboration</span>
+              <span class="skill-chip">Program Identity</span>
+            </div>
+
             <div class="project-link-row">
-              <a href="#contact" class="project-link-btn">Request Walkthrough →</a>
+              <a
+                href="https://storylineprojectsnikkirosenvald.s3.amazonaws.com/Coding+and+Programming+Language/Coding+and+Programming+Language+-+Storyline+output/story.html"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link-btn"
+              >
+                View Coding Sample →
+              </a>
+              <a
+                href="https://storylineprojectsnikkirosenvald.s3.amazonaws.com/Strategic+Design+and+Escalation+/Strategic+Design+and+Escalation+-+Storyline+output/story.html"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link-btn secondary"
+              >
+                View TPM Scenario →
+              </a>
+            </div>
+          </div>
+
+          <div class="system-visual">
+            <div class="system-visual-inner">
+              <div class="pathway-board">
+                <div class="pathway-row">
+                  <div class="pathway-family">
+                    <strong>Threat</strong>
+                    <span>Career growth for threat operations and analysis roles.</span>
+                  </div>
+                  <div class="pathway-track">
+                    <div class="pathway-step">SOC Analyst<em>Omega · L4</em></div>
+                    <div class="pathway-step">Security Engineer<em>Delta · L5</em></div>
+                    <div class="pathway-step">Senior SE<em>Alpha · L6</em></div>
+                  </div>
+                </div>
+
+                <div class="pathway-row">
+                  <div class="pathway-family">
+                    <strong>IAM</strong>
+                    <span>Access and identity progression with clear skill-building stages.</span>
+                  </div>
+                  <div class="pathway-track">
+                    <div class="pathway-step">Access Control Specialist<em>Omega · L4</em></div>
+                    <div class="pathway-step">IAM Manager<em>Delta · L5</em></div>
+                    <div class="pathway-step">Senior IAM Manager<em>Alpha · L6</em></div>
+                  </div>
+                </div>
+
+                <div class="pathway-row">
+                  <div class="pathway-family">
+                    <strong>Technical Programs</strong>
+                    <span>Technical PM and software-focused tracks for internal mobility.</span>
+                  </div>
+                  <div class="pathway-track">
+                    <div class="pathway-step">Security Team Manager<em>Omega · L4</em></div>
+                    <div class="pathway-step">Technical Program Manager<em>Delta · L5</em></div>
+                    <div class="pathway-step">Senior TPM<em>Alpha · L6</em></div>
+                  </div>
+                </div>
+
+                <div class="pathway-row">
+                  <div class="pathway-family">
+                    <strong>Leadership & Intelligence</strong>
+                    <span>Management and business intelligence progression built into the same ecosystem.</span>
+                  </div>
+                  <div class="pathway-track">
+                    <div class="pathway-step">Security Team Manager<em>L4–L6</em></div>
+                    <div class="pathway-step">Business Intelligence Engineer<em>L4–L6</em></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="artifact-preview">
+                <div class="artifact-preview-label">Original visual reference (click to enlarge)</div>
+                <div class="artifact-preview-frame" onclick="openLightbox('pathways.png', 'Career pathways architecture map preview')">
+                  <img src="pathways.png" alt="Career pathways architecture map preview">
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- 3-UP GRID -->
-      <div class="projects-grid-3 reveal">
+        <div class="projects-grid-2 reveal">
+          <div class="project-card">
+            <div class="project-visual">
+              <div class="project-visual-glyph">⭐</div>
+              <span class="project-visual-tag">Amazon · ~8K Employees</span>
+              <div class="project-meta-badge">
+                <span class="badge badge-cyan">Executive PD</span>
+                <span class="badge">Program Lead</span>
+              </div>
+            </div>
 
-        <!-- Lifebridge -->
-        <div class="project-card">
-          <div class="project-visual">
-            <div class="project-visual-glyph">📱</div>
-            <span class="project-visual-tag">Lifebridge · 2022 · Pro Bono</span>
-            <div class="project-meta-badge">
-              <span class="badge badge-cyan">Mission-Driven</span>
-              <span class="badge">255+ Modules</span>
+            <div class="project-content">
+              <p class="project-kicker">Advantage Experience · Amazon</p>
+              <h3 class="project-title">Executive Professional Development — Built From Zero</h3>
+              <p class="project-body">
+                Advantage Experience was an internal professional development initiative for roughly 8,000 senior employees, created to address gaps in performance management, inclusive leadership, and AI fluency.
+              </p>
+              <p class="project-body">
+                I helped turn that need into something real and usable: a branded program, coded wiki hub, reusable learning assets, feedback loops, and stronger alignment to Leadership Principles and annual performance conversations.
+              </p>
+
+              <div class="project-results">
+                <div class="results-label">What it produced</div>
+                <ul class="results-list">
+                  <li>120+ reusable content assets across 15+ topics</li>
+                  <li>Coded wiki hub that made materials easier to find and reuse</li>
+                  <li>Templates and governance that reduced content build time</li>
+                  <li>Learning outcomes tied back to Leadership Principles and annual performance conversations</li>
+                </ul>
+              </div>
+
+              <div class="project-link-row">
+                <a href="#contact" class="project-link-btn">Request Walkthrough →</a>
+              </div>
             </div>
           </div>
 
-          <div class="project-content">
-            <p class="project-kicker">Empowering At-Risk Youth · Lifebridge Academy</p>
-            <h3 class="project-title">255+ Microlearning Modules for Foster Youth</h3>
-            <p class="project-body">
-              Built a mobile-first digital learning library for at-risk teens in foster care across Georgia, with interactive lessons that ended in practical action—not just awareness.
-            </p>
+          <div class="project-card">
+            <div class="project-visual">
+              <div class="project-visual-glyph">🔍</div>
+              <span class="project-visual-tag">Amazon · ~500 Assessors</span>
+              <div class="project-meta-badge">
+                <span class="badge badge-cyan">3rd Party Enablement</span>
+                <span class="badge">From Zero</span>
+              </div>
+            </div>
 
-            <div class="project-link-row">
-              <a href="#testimonial" class="project-link-btn">See Testimonial →</a>
-              <a href="#contact" class="project-link-btn secondary">Request Samples →</a>
+            <div class="project-content">
+              <p class="project-kicker">VISA Assessor Enablement · Amazon</p>
+              <h3 class="project-title">Third-Party Assessor Enablement Built From Scratch</h3>
+              <p class="project-body">
+                Built a new enablement program to prepare third-party assessors across partner sites for more consistent audit execution, shared terminology, and standardized findings communication.
+              </p>
+              <p class="project-body">
+                The end result was a more unified enablement engine that moved teams from subjective opinions to standardized findings.
+              </p>
+
+              <div class="project-results">
+                <div class="results-label">What it produced</div>
+                <ul class="results-list">
+                  <li>~500 assessors enabled across partner locations</li>
+                  <li>Standardized language and process expectations</li>
+                  <li>One full day cut from the audit cycle through cleaner handoffs</li>
+                </ul>
+              </div>
+
+              <div class="project-link-row">
+                <a href="#contact" class="project-link-btn">Request Walkthrough →</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Virtual Culture -->
-        <div class="project-card">
-          <div class="project-visual">
-            <div class="project-visual-glyph">📡</div>
-            <span class="project-visual-tag">2021 · Articulate Rise</span>
-            <div class="project-meta-badge">
-              <span class="badge badge-cyan">Remote Work</span>
-              <span class="badge">Action Mapping</span>
+        <div class="projects-grid-3 reveal">
+          <div class="project-card">
+            <div class="project-visual">
+              <div class="project-visual-glyph">📱</div>
+              <span class="project-visual-tag">Lifebridge · 2022 · Pro Bono</span>
+              <div class="project-meta-badge">
+                <span class="badge badge-cyan">Mission-Driven</span>
+                <span class="badge">255+ Modules</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <p class="project-kicker">Lifebridge Academy</p>
+              <h3 class="project-title">Microlearning for At-Risk Youth</h3>
+              <p class="project-body">
+                Built a mobile-first digital learning library for at-risk teens in foster care across Georgia, with interactive lessons designed for clarity, engagement, and practical action.
+              </p>
+
+              <div class="project-link-row">
+                <a
+                  href="https://trainingpreview.edapp.com/p/uegkCpPQ5tIGeZba7CtWTWEk?lessonId=619e5cd80e2b8ad23a7559a9"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="project-link-btn"
+                >
+                  Human Trafficking →
+                </a>
+                <a
+                  href="https://trainingpreview.edapp.com/p/7MrxxKzZQoaWZM5Lw1UbuJTq?lessonId=619e5ec631525118c1e698c9"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="project-link-btn secondary"
+                >
+                  Drugs & Alcohol →
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="project-content">
-            <p class="project-kicker">Remote Communication Strategy</p>
-            <h3 class="project-title">Mapping Virtual Culture — From Brainstorm to eLearning</h3>
-            <p class="project-body">
-              Used interviews and action mapping to identify root-cause communication breakdowns in distributed teams, then translated those findings into a targeted eLearning solution.
-            </p>
+          <div class="project-card">
+            <div class="project-visual">
+              <div class="project-visual-glyph">🤖</div>
+              <span class="project-visual-tag">Articulate Rise</span>
+              <div class="project-meta-badge">
+                <span class="badge badge-cyan">AI Microlearning</span>
+                <span class="badge">Self-Directed Build</span>
+              </div>
+            </div>
 
-            <div class="project-link-row">
-              <a href="javascript:void(0)" class="project-link-btn" onclick="openLightbox('virtual-culture.png', 'Virtual Culture case sample (upload image to repo)')">View Sample →</a>
-              <a href="#contact" class="project-link-btn secondary">Request Walkthrough →</a>
+            <div class="project-content">
+              <p class="project-kicker">Digital Shadows AI</p>
+              <h3 class="project-title">Rise-Based AI Microlearning Course</h3>
+              <p class="project-body">
+                A self-directed Rise course I designed and built end-to-end to make AI concepts more accessible, practical, and usable for learners.
+              </p>
+
+              <div class="project-link-row">
+                <a
+                  href="https://storylineprojectsnikkirosenvald.s3.us-east-1.amazonaws.com/AI+Rise+Micro+Learning/content/index.html#/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="project-link-btn"
+                >
+                  Launch Course →
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Graduate Work -->
-        <div class="project-card">
-          <div class="project-visual">
-            <div class="project-visual-glyph">🧠</div>
-            <span class="project-visual-tag">Grand Canyon University · MS-IT</span>
-            <div class="project-meta-badge">
-              <span class="badge badge-cyan">Research-Based</span>
-              <span class="badge">Learning Science</span>
+          <div class="project-card">
+            <div class="project-visual">
+              <div class="project-visual-glyph">🧩</div>
+              <span class="project-visual-tag">Articulate Storyline</span>
+              <div class="project-meta-badge">
+                <span class="badge badge-cyan">TPM Pathway</span>
+                <span class="badge">Interactive Samples</span>
+              </div>
             </div>
-          </div>
 
-          <div class="project-content">
-            <p class="project-kicker">Graduate Work</p>
-            <h3 class="project-title">Research, Design Thinking, and Learning Science</h3>
-            <p class="project-body">
-              Graduate work that strengthened my foundation in learning strategy, UX thinking, instructional systems, and evidence-based design decisions.
-            </p>
+            <div class="project-content">
+              <p class="project-kicker">Technical Program Management Samples</p>
+              <h3 class="project-title">Interactive Storyline Modules</h3>
+              <p class="project-body">
+                Public-facing Storyline samples tied to technical upskilling and TPM-style learning—showing interactive design, scenario thinking, and applied technical content.
+              </p>
 
-            <div class="project-link-row">
-              <a href="javascript:void(0)" class="project-link-btn" onclick="openLightbox('gcu-sample.png', 'Graduate work sample (upload image to repo)')">View Sample →</a>
-              <a href="#contact" class="project-link-btn secondary">Request Details →</a>
+              <div class="project-link-row">
+                <a
+                  href="https://storylineprojectsnikkirosenvald.s3.amazonaws.com/Coding+and+Programming+Language/Coding+and+Programming+Language+-+Storyline+output/story.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="project-link-btn"
+                >
+                  Coding Sample →
+                </a>
+                <a
+                  href="https://storylineprojectsnikkirosenvald.s3.amazonaws.com/Strategic+Design+and+Escalation+/Strategic+Design+and+Escalation+-+Storyline+output/story.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="project-link-btn secondary"
+                >
+                  TPM Scenario →
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <section id="credentials" class="section-wrap">
     <div class="container">
       <div class="section-kicker reveal">Credentials & capability</div>
@@ -1868,7 +1929,7 @@
           <div style="margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.07);">
             <p style="font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate-light); margin-bottom: 0.75rem;">Outside of work</p>
             <p style="font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.75; margin-bottom: 0;">
-              Outside work, I’m usually with my three kids and Saint Bernard, traveling, in the mountains, or building and fixing something at home.
+              When I’m not working, I’m usually deep in the beautiful chaos of life with my three kids and a Saint Bernard. You’ll find me in the mountains, traveling, or mid-project on whatever I’m currently building or fixing around the house. I’m a big believer that the best work happens when you’re fueled by curiosity, a little adventure, and the common sense to know when to step away and breathe.
             </p>
           </div>
         </div>
